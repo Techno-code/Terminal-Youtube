@@ -7,7 +7,7 @@ channel_number_of_subscribers = 0
 channel_videos = []
 
 # User login/signup
-new_account = input("Do you have a channel: (Y for yes, N for no)")
+new_account = input("Do you have a channel: (Y for yes, N for no) ")
 
 if new_account == "Y":
     channel_name = input("Enter your channel name: ")
