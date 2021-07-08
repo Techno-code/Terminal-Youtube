@@ -21,6 +21,7 @@ def read_file_as_list(filename):
     for line in lines_from_file:
         lines.append(line.strip())
 
+    file.close()
     return lines
 
 '''
@@ -122,3 +123,9 @@ def update_existing_channel(channel_name, channel_subscribers, channel_videos):
         file.write(video + "\n")
 
     file.close()
+
+def subscribe_to_channel(channel_name):
+
+    channel_name, channel_subscribers, channel_videos = get_channel_from_file(channel_name)
+    channel_subscribers += 1
+    update_existing_channel(channel_name, channel_subscribers, channel_videos)
