@@ -24,8 +24,7 @@ elif new_account == "N":
 # Save session information
 if new_account == "Y":
     # Update the existing channel file
-    pass
-
+    lib.backend.update_existing_channel(channel_name, channel_number_of_subscribers, channel_videos)
 elif new_account == "N":
     # Create a textfile with the channel information
     lib.backend.create_channel(channel_name, channel_number_of_subscribers, channel_videos)

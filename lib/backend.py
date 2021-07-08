@@ -81,7 +81,7 @@ def create_channel(channel_name, channel_subscribers):
 
     # Write the channel name and the number of subscribers into the file
     file.write(channel_name)
-    file.write(channel_subscribers)
+    file.write(str(channel_subscribers))
     file.close()
 
 def create_channel(channel_name, channel_subscribers, channel_videos):
@@ -92,7 +92,7 @@ def create_channel(channel_name, channel_subscribers, channel_videos):
 
     # Write the channel name and the number of subscribers into the file
     file.write(channel_name)
-    file.write(channel_subscribers)
+    file.write(str(channel_subscribers))
 
     for video in channel_videos:
         file.write(video)
@@ -102,5 +102,23 @@ def create_channel(channel_name, channel_subscribers, channel_videos):
 '''
     This function updates an existing channel file
         nothing is returned
-
 '''
+def update_existing_channel(channel_name, channel_subscribers, channel_videos):
+
+    # Name of text file for the existing channel
+    filename = channel_name + ".txt"
+    file = open(filename, "w")
+
+    # Erase the contents in the current file; we will update the file by rewriting it
+    file.truncate(0)
+    file.close()
+
+    # Same code below as creating a new channel file! Write the channel name and the number of subscribers into the file
+    file = open(filename, "w")
+    file.write(channel_name)
+    file.write(str(channel_subscribers))
+
+    for video in channel_videos:
+        file.write(video)
+
+    file.close()
