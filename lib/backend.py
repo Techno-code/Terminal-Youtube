@@ -13,7 +13,7 @@
 def read_file_as_list(filename):
 
     # Open the file
-    file = open("filename", "r")
+    file = open(filename, "r")
     # Retrieve contents of file as lines; note that each line will end with a newline character, will strip later
     lines_from_file = file.readlines()
 

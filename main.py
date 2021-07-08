@@ -19,8 +19,6 @@ elif new_account == "N":
 
 # Main event loop
 
-
-
 # Save session information
 if new_account == "Y":
     # Update the existing channel file
