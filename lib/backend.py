@@ -63,7 +63,7 @@ def get_channel_videos(channel):
     This function creates a new text file from a channel's data
         nothing is returned
 '''
-def create_channel(channel_name):
+def create_channel_name(channel_name):
 
     # Create a new text file for the channel
     filename = channel_name + ".txt"
@@ -74,7 +74,7 @@ def create_channel(channel_name):
     file.write(0)
     file.close()
 
-def create_channel(channel_name, channel_subscribers):
+def create_channel_subs(channel_name, channel_subscribers):
 
     # Create a new text file for the channel
     filename = channel_name + ".txt"
